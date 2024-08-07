@@ -1,6 +1,8 @@
 /* style.css */
 
 .body {
+  display: flex;
+  flex-direction: row;
   background-color: #2E3440;;
   color: #D8DEE9;;
   font-family: 'Arial', sans-serif;
@@ -78,4 +80,16 @@ button:hover, .btn-primary:hover {
 
 .content-container {
   flex-grow: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .body {
+    flex-direction: column;
+  }
+
+  .profile-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
