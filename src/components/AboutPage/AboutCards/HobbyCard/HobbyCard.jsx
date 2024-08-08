@@ -7,7 +7,11 @@ const HobbyCard = () => {
             <Card.Body>
                 <Card.Title>Hobbies & Interests</Card.Title>
                 <Card.Text>
-                    I like video games, watching sports and films
+                    <ul>
+                        <li><strong>VideoGames:</strong> I like analyzing the game design</li>
+                        <li><strong>Watching Sports:</strong> I admire sports</li>
+                        <li><strong>Films:</strong> Passionate about watching and analyzing films</li>
+                    </ul>
                 </Card.Text>
             </Card.Body>
         </Card>

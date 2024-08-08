@@ -5,7 +5,7 @@ import photo1 from './assets/photo1.jpg';
 
 
 function Profile() {
-  const text = "Computer Science Student at IFSC";
+  const text = "Hi! You can connect with me through my LinkedIn and my GitHub";
 
   return (
     <Card style={{ width: '18rem', margin: '20px auto' }}>
@@ -15,7 +15,7 @@ function Profile() {
         <Card.Text>{text}</Card.Text>
         <div className="d-flex justify-content-between">
           <Button variant="primary" href='https://github.com/igorminerva'>
-            <i className="bi bi-github"></i> Git Hub
+            <i className="bi bi-github"></i> GitHub
           </Button>
           <Button variant="primary" href='https://www.linkedin.com/in/igor-minerva-9a0336265'>
             <i className="bi bi-linkedin"></i> LinkedIn
