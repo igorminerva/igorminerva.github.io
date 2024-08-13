@@ -85,7 +85,7 @@ button:hover, .btn-primary:hover {
 /* Responsive styles */
 @media (max-width: 768px) {
   .body {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .profile-container {
