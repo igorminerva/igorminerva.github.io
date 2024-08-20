@@ -43,8 +43,8 @@ const ProjectCard = () => {
     <Row>
       {projects.map((project, index) => (
         <Col key={index} sm={12} md={6} lg={4} className="mb-3">
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={project.imgSrc} />
+          <Card style={{ width: '18rem'}}>
+            <Card.Img variant="top" src={project.imgSrc} style={{height:'18rem', objectFit:'contain'}}/>
             <Card.Body>
               <Card.Title>{project.title}</Card.Title>
               <Card.Text>{project.description}</Card.Text>
