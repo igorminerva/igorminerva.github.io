@@ -10,7 +10,7 @@ const EducationCard = () => {
                 <Card.Text>
                     <ul>
                         <li><strong>Bachelor's Degree in Computer Science</strong><br />
-                            Institudo Federal de Santa Catarina (IFSC), 2021 - On going
+                            Institudo Federal de Santa Catarina (IFSC), 2021 - 2024
                         </li>
                         <li>
                             <strong>Courses</strong>

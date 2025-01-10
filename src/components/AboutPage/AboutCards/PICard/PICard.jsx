@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const PICard = () => {
     return (
@@ -9,8 +10,8 @@ const PICard = () => {
                 <Card.Text>
                     Born in Turin, Italy. I'm an italian-brazilian and this is my resume!.
                     <br/>
-                    <strong>Email:</strong> igorminerva81@gmail.com<br />
-                    <strong>Instagram:</strong> @mr_candux<br />
+                    <strong>Email:</strong> minerva.igor1@gmail.com<br />
+                    <strong>Lattes Curriculum:</strong> <Link to="http://lattes.cnpq.br/1603227135705138">Igor Minerva</Link><br/>
                 </Card.Text>
             </Card.Body>
         </Card>

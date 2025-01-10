@@ -15,6 +15,7 @@ const SkillCard = () => {
                         <li>C</li>
                         <li>PHP</li>
                         <li>HTML/CSS</li>
+                        <li>MySql</li>
                     </ul>
                     <strong>Technologies</strong>
                     <ul>
