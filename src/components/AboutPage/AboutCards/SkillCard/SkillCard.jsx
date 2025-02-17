@@ -10,9 +10,9 @@ const SkillCard = () => {
                     <strong>Programming Languages</strong>
                     <ul>
                         <li>Java</li>
-                        <li>JavaScript - Libraries: React.js / React native</li>
+                        <li>JavaScript - FrameWorks: React.js / React native</li>
                         <li>Python</li>
-                        <li>C</li>
+                        <li>C#</li>
                         <li>PHP</li>
                         <li>HTML/CSS</li>
                         <li>MySql</li>

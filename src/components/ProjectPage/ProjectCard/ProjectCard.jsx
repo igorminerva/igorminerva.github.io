@@ -4,14 +4,15 @@ import { Row, Col, Card, Button } from 'react-bootstrap';
 import phApp from '../assets/phApp.png'
 import ttc from '../assets/ttc.png'
 import php from '../assets/php.png'
-import site from '../assets/site.png'
+import cs from '../assets/cs.jpg'
+import r from '../assets/react.jpg'
 
 const ProjectCard = () => {
   const projects = [
     {
       title: 'My website',
       description: 'The project of the website that you\'re looking',
-      imgSrc: site,
+      imgSrc: r,
       github: 'https://github.com/igorminerva/igorminerva.github.io',
 
     },
@@ -20,6 +21,13 @@ const ProjectCard = () => {
       description: 'App made in react native to show the statistics of the NBA',
       imgSrc: phApp,
       github: 'https://github.com/igorminerva/APP-react-native',
+
+    },
+    {
+      title: 'Task Manager C#',
+      description: 'Task Manager with CRUD C#',
+      imgSrc: cs,
+      github: 'https://github.com/igorminerva/ConsoleApp1',
 
     },
     {
@@ -36,7 +44,7 @@ const ProjectCard = () => {
       github: 'https://github.com/igorminerva/SimpleLoginFormPHP',
 
     },
-
+    
 
   ];
   return (
