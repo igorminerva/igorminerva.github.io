@@ -6,6 +6,7 @@ import ttc from '../assets/ttc.png'
 import php from '../assets/php.png'
 import cs from '../assets/cs.jpg'
 import r from '../assets/react.jpg'
+import ds from '../assets/ds.jpg'
 
 const ProjectCard = () => {
   const projects = [
@@ -28,6 +29,13 @@ const ProjectCard = () => {
       description: 'Task Manager with CRUD C#',
       imgSrc: cs,
       github: 'https://github.com/igorminerva/ConsoleApp1',
+
+    },
+    {
+      title: 'Bot Discord',
+      description: 'A funny discord bot',
+      imgSrc: ds,
+      github: 'https://github.com/igorminerva/discord-bot',
 
     },
     {
