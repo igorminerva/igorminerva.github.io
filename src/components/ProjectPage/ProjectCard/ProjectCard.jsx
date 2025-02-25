@@ -7,6 +7,7 @@ import php from '../assets/php.png'
 import cs from '../assets/cs.jpg'
 import r from '../assets/react.jpg'
 import ds from '../assets/ds.jpg'
+import weather from '../assets/weather.png'
 
 const ProjectCard = () => {
   const projects = [
@@ -36,6 +37,13 @@ const ProjectCard = () => {
       description: 'A funny discord bot',
       imgSrc: ds,
       github: 'https://github.com/igorminerva/discord-bot',
+
+    },
+    {
+      title: 'PyWeather',
+      description: 'An application to check the weather',
+      imgSrc: weather,
+      github: 'https://github.com/igorminerva/PyWeather',
 
     },
     {
