@@ -8,6 +8,7 @@ import cs from '../assets/cs.jpg'
 import r from '../assets/react.jpg'
 import ds from '../assets/ds.jpg'
 import weather from '../assets/weather.png'
+import telegram from '../assets/telegram.jpg'
 
 const ProjectCard = () => {
   const projects = [
@@ -37,6 +38,13 @@ const ProjectCard = () => {
       description: 'A funny discord bot',
       imgSrc: ds,
       github: 'https://github.com/igorminerva/discord-bot',
+
+    },
+    {
+      title: 'Bot Telegram',
+      description: 'A funny Telegram bot',
+      imgSrc: telegram,
+      github: 'https://github.com/igorminerva/telegramBot',
 
     },
     {
