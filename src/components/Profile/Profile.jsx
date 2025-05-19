@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Card} from 'react-bootstrap';
 
-import photo1 from './assets/photo1.jpg';
+import pfp from './assets/pfp.jpg';
 
 
 function Profile() {
@@ -9,7 +9,7 @@ function Profile() {
 
   return (
     <Card style={{ width: '18rem', margin: '20px auto' }}>
-      <Card.Img variant="top" src={photo1} />
+      <Card.Img variant="top" src={pfp} />
       <Card.Body>
         <Card.Title>Igor Minerva</Card.Title>
         <Card.Text>{text}</Card.Text>
