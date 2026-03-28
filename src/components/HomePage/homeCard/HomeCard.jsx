@@ -2,49 +2,55 @@ import React from 'react'
 import { Card, Row } from 'react-bootstrap'
 
 const HomeCard = () => {
+    const sectionStyle = {
+        marginTop: '32px',
+        marginBottom: '24px',
+        fontSize: '20px',
+        fontWeight: '600',
+        letterSpacing: '0.01em'
+    }
+
+    const paragraphStyle = {
+        marginBottom: '16px',
+        lineHeight: '1.6',
+        color: '#bbb'
+    }
 
     return (
         <Row className='justify-content-center'>
             <Card className="card mb-3">
                 <Card.Body>
                     <Card.Text>
-                        <p style={{ marginBottom: '24px', fontSize: '28px', fontWeight: 'bold' }}>
-                            👋 <strong>Hi, I’m Igor Minerva, a Full-Stack Developer</strong>
-                        </p>
-                        <p style={{ marginBottom: '24px' }}>
-                            My journey into the world of coding began during my university years, where I discovered my passion for solving problems and building things that matter. Since then, I’ve been dedicated to honing my skills and building a strong career in tech. I specialize in creating functional, elegant, and scalable solutions that make a real impact.
-                        </p>
-
-                        <p style={{ marginBottom: '24px', fontSize: '28px', fontWeight: 'bold' }}>
-                            🚀 <strong>What Drives Me</strong>
-                        </p>
-                        <p style={{ marginBottom: '24px' }}>
-                            I’m a lifelong learner at heart. Whether it’s mastering a new programming language, exploring cutting-edge frameworks, or diving into the latest tools, I’m always pushing myself to grow. I believe that adaptability and continuous improvement are the keys to staying relevant in the fast-paced tech industry. My goal is to deliver high-quality, innovative solutions that not only meet but exceed expectations.
+                        <h2 style={{ marginBottom: '24px', fontSize: '32px', fontWeight: '700' }}>
+                            Igor Minerva
+                        </h2>
+                        <p style={{ ...paragraphStyle, fontSize: '18px', fontWeight: '500', marginBottom: '32px' }}>
+                            Researcher | Problem Solver | Tech Enthusiast
                         </p>
 
-                        <p style={{ marginBottom: '24px', fontSize: '28px', fontWeight: 'bold' }}>
-                            💻 <strong>What I Do</strong>
-                        </p>
-                        <p style={{ marginBottom: '24px' }}>
-                            As a Full-Stack Developer, I work across the entire development stack, from designing user-friendly interfaces to building back-end systems. But I can also move in differents area of computer science.
-                            My Skills can be found in the "About" page.
-                            I’m also passionate about clean code, efficient workflows, and collaborative development practices.
+                        <p style={paragraphStyle}>
+                            I'm a researcher. I tried my best to learn things by myself, and I have a strong passion for learning and problem-solving. I have a deep interest in technology and its potential to drive innovation and create impactful solutions. My journey has been fueled by curiosity, a desire to understand complex systems, and a commitment to continuous growth.
                         </p>
 
-                        <p style={{ marginBottom: '24px', fontSize: '28px', fontWeight: 'bold' }}>
-                            🌟 <strong>My Projects</strong>
-                        </p>
-                        <p style={{ marginBottom: '24px' }}>
-                            Over the years, I’ve worked on a variety of projects, from small personal apps to large-scale enterprise solutions. 
-                            They can be found in the "Projects" pages. I recommend check it out.
-                            Each project has taught me something new and reinforced my love for problem-solving and innovation.
+                        <h3 style={sectionStyle}>
+                            Expertise & Approach
+                        </h3>
+                        <p style={paragraphStyle}>
+                            My expertise spans across various domains, including software development, data analysis, game design and development and machine learning. I thrive on tackling challenging problems and finding creative solutions. I believe in a collaborative approach to research and development, valuing diverse perspectives and fostering an environment of open communication.
                         </p>
 
-                        <p style={{ marginBottom: '24px', fontSize: '28px', fontWeight: 'bold' }}>
-                            📫 <strong>Let’s Collaborate!</strong>
+                        <h3 style={sectionStyle}>
+                            Experience
+                        </h3>
+                        <p style={paragraphStyle}>
+                            Throughout my career, I've contributed to a diverse range of projects—from personal applications. Each experience has reinforced my commitment to innovation and problem-solving. My complete technical background is available on the <strong>About</strong> page, and selected work can be found in the <strong>Projects</strong> section.
                         </p>
-                        <p style={{ marginBottom: '24px' }}>
-                            I’m always excited to connect with like-minded individuals, tackle new challenges, and explore opportunities. Whether it’s a project, idea, or just a chat about tech, feel free to reach out—I’d love to hear from you! Let’s build something amazing together.
+
+                        <h3 style={sectionStyle}>
+                            Let's Connect
+                        </h3>
+                        <p style={paragraphStyle}>
+                            I'm interested in connecting with professionals, exploring new opportunities, and collaborating on meaningful projects. Feel free to reach out to discuss ideas, potential partnerships, or to learn more about my work.
                         </p>
                     
                     </Card.Text>

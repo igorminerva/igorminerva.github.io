@@ -1,89 +1,120 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Row, Col, Card, Button } from 'react-bootstrap';
 
-import phApp from '../assets/phApp.png'
-import ttc from '../assets/ttc.png'
-import php from '../assets/php.png'
-import cs from '../assets/cs.jpg'
-import r from '../assets/react.jpg'
-import ds from '../assets/ds.jpg'
-import weather from '../assets/weather.png'
-import telegram from '../assets/telegram.jpg'
-
 const ProjectCard = () => {
-  const projects = [
-    {
-      title: 'My website',
-      description: 'The project of the website that you\'re looking',
-      imgSrc: r,
-      github: 'https://github.com/igorminerva/igorminerva.github.io',
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    },
-    {
-      title: 'App NBA',
-      description: 'App made in react native to show the statistics of the NBA',
-      imgSrc: phApp,
-      github: 'https://github.com/igorminerva/APP-react-native',
+  const GITHUB_USERNAME = 'igorminerva'; // Change this to your GitHub username
+  const REPOS_TO_EXCLUDE = ['igorminerva.github.io']; // Optional: repos to hide
 
-    },
-    {
-      title: 'Task Manager C#',
-      description: 'Task Manager with CRUD C#',
-      imgSrc: cs,
-      github: 'https://github.com/igorminerva/ConsoleApp1',
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=stars&per_page=100`);
+        
+        if (!response.ok) {
+          throw new Error('Failed to fetch repositories');
+        }
+        
+        const data = await response.json();
+        
+        // Filter out forked repos and excluded ones, sort by updated date
+        const filteredProjects = data
+          .filter(repo => !repo.fork && !REPOS_TO_EXCLUDE.includes(repo.name))
+          .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+        
+        setProjects(filteredProjects);
+        setError(null);
+      } catch (err) {
+        console.error('Error fetching repos:', err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    },
-    {
-      title: 'Bot Discord',
-      description: 'A funny discord bot',
-      imgSrc: ds,
-      github: 'https://github.com/igorminerva/discord-bot',
+    fetchProjects();
+  }, []);
 
-    },
-    {
-      title: 'Bot Telegram',
-      description: 'A funny Telegram bot',
-      imgSrc: telegram,
-      github: 'https://github.com/igorminerva/telegramBot',
+  if (loading) {
+    return (
+      <Row>
+        <Col className="text-center">
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </Col>
+      </Row>
+    );
+  }
 
-    },
-    {
-      title: 'PyWeather',
-      description: 'An application to check the weather',
-      imgSrc: weather,
-      github: 'https://github.com/igorminerva/PyWeather',
+  if (error) {
+    return (
+      <Row>
+        <Col className="text-center">
+          <p className="text-danger">Error loading projects: {error}</p>
+        </Col>
+      </Row>
+    );
+  }
 
-    },
-    {
-      title: 'TicTacToe in C',
-      description: 'A simple TicTacToe game made in C and playable in the terminal',
-      imgSrc: ttc,
-      github: 'https://github.com/igorminerva/tictactoe',
+  if (projects.length === 0) {
+    return (
+      <Row>
+        <Col className="text-center">
+          <p>No projects found</p>
+        </Col>
+      </Row>
+    );
+  }
 
-    },
-    {
-      title: 'Login Form PHP',
-      description: 'A simple login/register form in php linked with a mySql database',
-      imgSrc: php,
-      github: 'https://github.com/igorminerva/SimpleLoginFormPHP',
-
-    },
-    
-
-  ];
   return (
     <Row>
-      {projects.map((project, index) => (
-        <Col key={index} sm={12} md={6} lg={4} className="mb-3">
-          <Card style={{ width: '18rem'}}>
-            <Card.Img variant="top" src={project.imgSrc} style={{height:'18rem', objectFit:'contain'}}/>
-            <Card.Body>
-              <Card.Title>{project.title}</Card.Title>
-              <Card.Text>{project.description}</Card.Text>
-              <div className="d-flex justify-content-center">
-                <Button variant="primary" href={project.github} target="_blank" block>
-                  <i class="bi bi-github"></i> GitHub
-                </Button>
+      {projects.map((project) => (
+        <Col key={project.id} sm={12} md={6} lg={6} className="mb-3">
+          <Card style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <Card.Img 
+              variant="top" 
+              src={`https://opengraph.githubassets.com/1/${project.full_name}`}
+              style={{height:'16rem', objectFit:'cover', backgroundColor: '#222'}}
+              onError={(e) => {
+                e.target.style.backgroundColor = '#e9ecef';
+              }}
+            />
+            <Card.Body style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+              <Card.Title>{project.name}</Card.Title>
+              <Card.Text style={{ flex: 1 }}>
+                {project.description || 'No description available'}
+              </Card.Text>
+              <div className="d-flex justify-content-between align-items-center mt-auto">
+                {project.language && (
+                  <small className="text-muted">{project.language}</small>
+                )}
+                <div className="d-flex gap-2">
+                  {project.homepage && (
+                    <Button 
+                      variant="secondary" 
+                      size="sm"
+                      href={project.homepage} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-globe"></i> Visit
+                    </Button>
+                  )}
+                  <Button 
+                    variant="primary" 
+                    size="sm"
+                    href={project.html_url} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="bi bi-github"></i> GitHub
+                  </Button>
+                </div>
               </div>
             </Card.Body>
           </Card>
