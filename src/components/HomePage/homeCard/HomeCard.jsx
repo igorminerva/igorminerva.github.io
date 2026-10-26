@@ -35,7 +35,8 @@ const HomeCard = () => {
     const backStyle = {
         fontFamily: 'var(--font-pixel)',
         fontSize: '12px',
-        marginTop: '32px',
+        marginTop: 0,
+        marginBottom: '24px',
         cursor: 'pointer',
         color: '#666'
     }
@@ -49,6 +50,9 @@ const HomeCard = () => {
     return (
         <Card className="card mb-3" style={{ maxWidth: '100%' }}>
             <Card.Body>
+                <p style={backStyle} onClick={() => navigate('/')}>
+                    &lt; BACK TO MENU
+                </p>
                 <pre className="ascii-art">{asciiArt}</pre>
 
                 <h2 style={headingStyle}>
@@ -76,6 +80,16 @@ const HomeCard = () => {
                     level design, and narrative integration. Whether it's 2D pixel art adventures or 
                     experimental gameplay systems, I love bringing creative visions to life.
                 </p>
+                <iframe
+                    title="Glitched Dungeon by iocandux"
+                    frameBorder="0"
+                    src="https://itch.io/embed/5106907?bg_color=a15952&amp;fg_color=efefef&amp;link_color=331e0d&amp;border_color=331e0d"
+                    width="552"
+                    height="167"
+                    style={{ maxWidth: '100%', marginBottom: '24px' }}
+                >
+                    <a href="https://iocandux.itch.io/glitched-dungeon">Glitched Dungeon by iocandux</a>
+                </iframe>
 
                 <hr style={{ borderColor: '#333', margin: '32px 0' }} />
 
@@ -99,9 +113,6 @@ const HomeCard = () => {
                     discuss game design, or explore new opportunities in game development.
                 </p>
 
-                <p style={backStyle} onClick={() => navigate('/')}>
-                    &lt; BACK TO MENU
-                </p>
             </Card.Body>
         </Card>
     )

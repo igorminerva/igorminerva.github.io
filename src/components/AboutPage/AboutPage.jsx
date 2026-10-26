@@ -10,13 +10,17 @@ const AboutPage = () => {
   const backStyle = {
     fontFamily: 'var(--font-pixel)',
     fontSize: '12px',
-    marginTop: '32px',
+    marginTop: '16px',
+    marginBottom: '24px',
     cursor: 'pointer',
     color: '#666'
   }
 
   return (
     <Container className='mb-2' style={{ maxWidth: '100%' }}>
+      <p style={backStyle} onClick={() => navigate('/')}>
+        &lt; BACK TO MENU
+      </p>
       <Row className="my-4">
         <Col>
           <h1>About Me</h1>
@@ -24,9 +28,6 @@ const AboutPage = () => {
       </Row>
       <AboutCards />
       <ResumeButton />
-      <p style={backStyle} onClick={() => navigate('/')}>
-        &lt; BACK TO MENU
-      </p>
     </Container>
   )
 }

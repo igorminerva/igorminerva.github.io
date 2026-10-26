@@ -1,4 +1,6 @@
 /* Modern Black & White Theme */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
 :root {
   --color-bg: #111;
   --color-bg-light: #222;
@@ -9,11 +11,19 @@
   --color-border: #333;
   --color-shadow: rgba(0,0,0,0.2);
   --radius: 0px;
-  --font-main: 'VT323', 'Courier New', monospace;
-  --font-pixel: 'Press Start 2P', cursive;
+  --font-main: 'VT323', 'Courier New', Courier, monospace;
+  --font-pixel: 'Press Start 2P', 'VT323', 'Courier New', monospace;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+html, body {
+  -webkit-font-smoothing: none;      /* Chrome/Safari on macOS */
+  -moz-osx-font-smoothing: grayscale;/* Firefox on macOS */
+  font-smooth: never;                /* Non-standard but honored */
+  text-rendering: geometricPrecision;/* Keeps glyph metrics exact */
+  font-synthesis: none;              /* Don't fake bold/italic */
+  font-kerning: normal;
+  font-variant-ligatures: none;
+}
 
 body {
   background: var(--color-bg);
@@ -73,7 +83,7 @@ a:hover {
   line-height: 1.15;
   color: #fff;
   white-space: pre;
-  marginBottom: 24px;
+  margin-bottom: 24px;
   text-align: center;
   overflow-x: auto;
 }
