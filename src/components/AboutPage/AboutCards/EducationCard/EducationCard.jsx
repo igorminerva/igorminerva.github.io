@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 
 const EducationCard = () => {
     return (
@@ -9,19 +8,16 @@ const EducationCard = () => {
                 <Card.Title>Education</Card.Title>
                 <Card.Text>
                     <ul>
-                        <li><strong>Bachelor's Degree in Computer Science</strong><br />
-                            Institudo Federal de Santa Catarina (IFSC), 2021 - 2024<br/>                           
+                        <li>
+                            <strong>Master of Science in Computer Science</strong><br />
+                            Universidade Estadual de Londrina (UEL), August 2025 - Present<br />
+                            Research on programming logic education, player emotion, and motivation through original game prototypes, including adaptive difficulty systems.
                         </li>
                         <li>
-                            <strong>Master's in Computer Science</strong><br />
-                            Universidade Estadual de Londrina (UEL), 2025 - present
+                            <strong>Bachelor of Science in Computer Science</strong><br />
+                            Instituto Federal de Santa Catarina (IFSC), March 2021 - December 2024<br />
+                            Capstone: developed an educational game platform using GDScript and Godot. Relevant coursework included game design, graphics programming, AI for games, and human-computer interaction.
                         </li>
-                        <li>
-                            <strong>Courses</strong>
-                        </li>
-                        <ul>
-                            <li>Claro / DIO- Java Spring boot. <Link to="https://www.linkedin.com/feed/update/urn:li:activity:7231383824524353537/">Here</Link></li>
-                        </ul>   
                     </ul>
 
                 </Card.Text>

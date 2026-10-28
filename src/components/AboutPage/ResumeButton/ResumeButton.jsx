@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 
-import resume from '../assets/resume.pdf'
+import resume from '../assets/Igor_Minerva_game_designer_developer_cv.pdf'
 
 const ResumeButton = () => {
     return (

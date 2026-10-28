@@ -16,28 +16,25 @@ const SkillCard = () => {
                     <strong>Programming Languages</strong>
                     <ul>
                         <li>GDScript</li>
-                        <li>Java</li>
-                        <li>JavaScript - FrameWorks: React.js / React native</li>
                         <li>Python</li>
-                        <li>C#</li>
-                        <li>PHP</li>
-                        <li>HTML/CSS</li>
-                        <li>MySql</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>SQL</li>
                     </ul>
-                    <strong>Technologies</strong>
+                    <strong>Game Design &amp; AI</strong>
                     <ul>
-                        <li>Godot Engine</li>
-                        <li>Git</li>
-                        <li>Google Docs / spreadsheets</li>
-                        <li>Microsoft Office</li>
-                        <li>Blender</li>
-                        <li>Linux</li>
+                        <li>Level design, gameplay mechanics, roguelike and deckbuilding design, player feedback, balancing, and emotional design</li>
+                        <li>Finite State Machines and Behavior Trees</li>
+                    </ul>
+                    <strong>Tools</strong>
+                    <ul>
+                        <li>Godot, Git, Blender, GIMP, Visual Studio, and Audacity</li>
                     </ul>
                     <strong>Languages</strong>
                     <ul>
-                        <li>Italian</li>
-                        <li>English</li>
-                        <li>Portuguese</li>
+                        <li>Italian (Native)</li>
+                        <li>English (Advanced/C1)</li>
+                        <li>Portuguese (Native)</li>
                     </ul>
                 </Card.Text>
             </Card.Body>
